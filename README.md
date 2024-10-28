@@ -22,10 +22,15 @@
 ## 目录结构
 ```
 /public
-    /uploads         # 存放上传照片的目录
-app.js              # 主应用程序文件
-photos.json        # 模拟数据库文件
-index.html         # 前端文件
+    /uploads            # 存放上传照片的目录
+    /app.js             # 主应用程序文件
+    /styles.css         # 页面样式表    
+    /index.html         # 前端文件
+/package.json
+/package-lock.json
+/server.js              #后端服务器代码
+/photos.json            # 模拟数据库文件
+
 ```
 
 ## 如何运行
