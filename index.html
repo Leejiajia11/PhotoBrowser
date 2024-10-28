@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Browser</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/exifr/dist/full.umd.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>照片浏览器</h1>
+
+        <!-- 照片上传区域 -->
+        <div class="upload-section">
+            <h2>上传照片</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="photoInput" name="photo" accept="image/*" required>
+                <input type="date" id="captureTime" name="captureTime" required>
+                <input type="text" id="captureLocation" name="captureLocation" placeholder="输入拍摄地点" required>
+                <button type="submit">上传</button>
+
+                <button id="uploadButton">自动获取时间地点</button>
+
+            </form>
+        </div>
+
+        <!-- 照片查询区域 -->
+        <div class="search-section">
+            <h2>查询照片</h2>
+            <label for="searchLocation">按地点查询:</label>
+            <input type="text" id="searchLocation" placeholder="输入地点">
+            <label for="searchDate">按时间查询:</label>
+            <input type="date" id="searchDate">
+
+            <button id="orderAsc">顺序</button>
+            <button id="orderDesc">倒序</button>
+            <button id="searchButton">查询</button>
+        </div>
+
+        <!-- 照片展示区域 -->
+        <div id="photoGallery" class="photo-gallery">
+        </div>
+    </div>
+
+
+    <!-- 放大照片的展示区域 -->
+    <!-- 模态框 -->
+    <div id="photoModal" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+        <br />
+        <button id="download">保存在本地</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
